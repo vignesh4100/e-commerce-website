@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FiShoppingCart, FiHeart, FiUser, FiSearch } from 'react-icons/fi';
+import { BiMenu } from 'react-icons/bi';
 
 function Navbar({ cartCount, onCartClick }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -11,16 +12,14 @@ function Navbar({ cartCount, onCartClick }) {
     'SKINCARE',
     'MAKEUP',
     'TOOLS',
-    'SUPPLEMENTS',
-    'BRANDS',
-    'SALE'
   ];
 
   return (
-    <header className="bg-white border-b border-gray-200">
+    <header className="fixed z-50 w-full bg-white border-b border-gray-200">
       {/* Main Navigation */}
-      <div className="container mx-auto px-4">
+      <div className="container  mx-auto px-4">
         <div className="flex items-center justify-between h-20">
+        <BiMenu className="h-6 w-6 text-gray-500 sm:hidden" />
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold text-primary">LUXE</Link>
 
@@ -37,7 +36,7 @@ function Navbar({ cartCount, onCartClick }) {
           </div> */}
 
         {/* Category Navigation */}
-        <nav className="hidden md:flex items-center justify-center space-x-8 py-4">
+        <nav className="hidden md:flex items-center justify-center space-x-8 py-2">
           {categories.map((category) => (
             <Link
               key={category}

@@ -7,29 +7,35 @@ function Home({ onAddToCart, onViewDetails, likedProducts, onToggleLike }) {
   return (
     <div>
       {/* Hero Banner */}
-      <section className="relative">
-        <div className="relative h-[600px] overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1600"
-            alt="Hero"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent">
-            <div className="container mx-auto px-4 h-full flex items-center">
-              <div className="max-w-xl text-white">
-                <h1 className="text-6xl font-bold mb-6">New Season New You</h1>
-                <p className="text-xl mb-8">Discover luxury beauty essentials for your daily routine</p>
-                <Link
-                  to="/category/new-in"
-                  className="inline-flex items-center bg-accent text-white px-8 py-4 rounded-full font-medium hover:bg-accent/90 transition-colors"
-                >
-                  Shop New Arrivals <FiArrowRight className="ml-2" />
-                </Link>
-              </div>
-            </div>
+      <div className="relative h-[600px] bg-gradient-to-r from-rose-50 to-rose-100">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center opacity-10"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+        <div className="max-w-xl">
+          <h1 className="text-4xl font-serif font-bold text-gray-900 sm:text-5xl">
+            Discover Your Natural Beauty
+          </h1>
+          <p className="mt-4 text-xl text-gray-600">
+            Explore our curated collection of premium beauty products for your daily routine.
+          </p>
+          <div className="mt-8">
+            <Link to="/category/new-in">
+            <button className="bg-rose-600 text-white px-8 py-3 rounded-full flex items-center space-x-2 hover:bg-rose-700 transition-colors">
+              <span>Shop Now</span>
+              <FiArrowRight className="h-5 w-5" />
+            </button>
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+
+{/* 
+      <Link
+        to="/category/new-in"
+        className="inline-flex items-center bg-accent text-white px-8 py-4 rounded-full font-medium hover:bg-accent/90 transition-colors"
+      >
+        Shop New Arrivals <FiArrowRight className="ml-2" />
+      </Link> */}
 
       {/* Features */}
       <section className="py-12 bg-neutral">
@@ -91,7 +97,7 @@ function Home({ onAddToCart, onViewDetails, likedProducts, onToggleLike }) {
       </section>
 
       {/* New Arrivals */}
-      <section className="py-16 bg-neutral">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-12">
             <h2 className="text-3xl font-bold">New Arrivals</h2>
@@ -99,12 +105,12 @@ function Home({ onAddToCart, onViewDetails, likedProducts, onToggleLike }) {
               View All <FiArrowRight className="inline ml-1" />
             </Link>
           </div>
-          <ProductList 
-            onAddToCart={onAddToCart} 
+          <ProductList
+            onAddToCart={onAddToCart}
             onViewDetails={onViewDetails}
             likedProducts={likedProducts}
-            onToggleLike={onToggleLike} 
-            limit={4} 
+            onToggleLike={onToggleLike}
+            limit={4}
           />
         </div>
       </section>
@@ -145,20 +151,20 @@ function Home({ onAddToCart, onViewDetails, likedProducts, onToggleLike }) {
           </form>
         </div>
       </section> */}
-      <div className="my-16 mx-10 bg-rose-50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-serif font-bold text-gray-900">Join Our Beauty Community</h2>
-            <p className="mt-4 text-gray-600">Subscribe to receive exclusive offers and beauty tips</p>
-            <div className="mt-6 max-w-md mx-auto flex gap-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 rounded-full px-6 py-3 border-gray-300 focus:border-rose-500 focus:ring-rose-500"
-              />
-              <button className="bg-rose-600 text-white px-8 py-3 rounded-full hover:bg-rose-700 transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </div>
+      <div className="my-16 mx-4 sm:mx-10 bg-rose-50 rounded-2xl p-8 text-center">
+        <h2 className="text-2xl font-serif font-bold text-gray-900">Join Our Beauty Community</h2>
+        <p className="mt-4 text-gray-600">Subscribe to receive exclusive offers and beauty tips</p>
+        <div className="mt-6 max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="flex-1 rounded-full px-6 py-3 border-gray-300 focus:border-rose-500 focus:ring-rose-500"
+          />
+          <button className="bg-rose-600 text-white px-8 py-3 rounded-full hover:bg-rose-700 transition-colors">
+            Subscribe
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

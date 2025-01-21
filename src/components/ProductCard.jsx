@@ -3,7 +3,7 @@ import { FiHeart, FiShoppingCart } from 'react-icons/fi';
 
 function ProductCard({ product, onAddToCart, onViewDetails, isLiked, onToggleLike }) {
   return (
-    <div className="group relative bg-white rounded-lg overflow-hidden">
+    <div className="group relative bg-white shadow-md rounded-lg overflow-hidden">
       {/* Image */}
       <div 
         className="relative aspect-square overflow-hidden cursor-pointer"
