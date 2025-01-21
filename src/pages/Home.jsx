@@ -124,17 +124,17 @@ function Home({ onAddToCart, onViewDetails, likedProducts, onToggleLike }) {
       </section> */}
 
       {/* Newsletter */}
-      <section className="py-20 bg-primary text-white">
+      {/* <section className="py-20 bg-pink-100 text-black">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Join Our Newsletter</h2>
-          <p className="text-white/80 mb-8 max-w-xl mx-auto">
+          <p className="text-gray-500/80 mb-8 max-w-xl mx-auto">
             Subscribe to get special offers, free giveaways, and exclusive deals.
           </p>
-          <form className="max-w-md mx-auto flex gap-4">
+          <form className="max-w-md mx-auto flex gap-4 sm:flex-col">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-6 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-white"
+              className="flex-1 px-6 py-3 rounded-full bg-white/10 border border-white/20 text-black placeholder-white/60 focus:outline-none focus:border-black"
             />
             <button
               type="submit"
@@ -144,7 +144,21 @@ function Home({ onAddToCart, onViewDetails, likedProducts, onToggleLike }) {
             </button>
           </form>
         </div>
-      </section>
+      </section> */}
+      <div className="my-16 mx-10 bg-rose-50 rounded-2xl p-8 text-center">
+            <h2 className="text-2xl font-serif font-bold text-gray-900">Join Our Beauty Community</h2>
+            <p className="mt-4 text-gray-600">Subscribe to receive exclusive offers and beauty tips</p>
+            <div className="mt-6 max-w-md mx-auto flex gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 rounded-full px-6 py-3 border-gray-300 focus:border-rose-500 focus:ring-rose-500"
+              />
+              <button className="bg-rose-600 text-white px-8 py-3 rounded-full hover:bg-rose-700 transition-colors">
+                Subscribe
+              </button>
+            </div>
+          </div>
     </div>
   );
 }
